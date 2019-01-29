@@ -25,11 +25,12 @@ class App extends Component {
     componentDidMount(){
       this.getTraits()
     }
-    
+
   render() {
+    const {traits}= this.state;
     return (
       <div className="App">
-
+        <List traits ={traits} />
       </div>
     );
   }
