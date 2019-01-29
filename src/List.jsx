@@ -19,34 +19,32 @@
      return(
        <div className="">
         {
-        traits.map((property) =>{
+          <div className="container">
+          <div className="row">
+
+          <div className="col-md-6">
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Fouvourite</th>
+                <th>Star Name</th>
+                <th></th>
+                <th>Characters</th>
+              </tr>
+            </thead>
+            <tbody>
+        {traits.map((property) =>{
           console.log(property);
           return(
-            <div className="container">
-            <div className="row">
-
-            <div className="col-md-6">
-            <table className="table">
-              <thead>
-                <tr>
-                  <th>Fouvourite</th>
-                  <th>Star Name</th>
-                  <th></th>
-                  <th>Characters</th>
-                </tr>
-              </thead>
-              <tbody>
-                {traits.map(obj =>{
-                  return(
                     <tr>
                       <td>
 
                       </td>
                       <td>
-                      {obj.name} <span>&nbsp;</span>
+                      {property.name} <span>&nbsp;</span>
                       </td>
                       <td>
-                      <p className="btn btn-warning btn-xs">Add to list</p>
+                      <p className="btn btn-warning btn-xs">Add </p>
                       </td>
                       <td>
                        <Info Info ={property} />
@@ -65,8 +63,7 @@
 
               </div>
               </div>
-          )
-        })
+
       }
        </div>
      );
