@@ -20,15 +20,16 @@ class Info extends Component{
     const Info =this.props.Info;
 
      if(!this.state.expanded){
-       return <p className="btn btn-info" onClick={this.open}>show info</p>
+       return <p className="btn btn-info btn-sm" onClick={this.open}>show info</p>
      }
 
     return(
       <div className="user-details">
-      <ul>
-        <li><h3>Gender: {Info.gender}</h3></li>
-        <li><h3>Birth date: {Info.birth_year}</h3></li>
-        <li><h3>Hair color: {Info.hair_color}</h3></li>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-info">Gender: {Info.gender}</li>
+        <li class="list-group-item list-group-item-info">Height: {Info.height}</li>
+        <li class="list-group-item list-group-item-info">Mass: {Info.mass}</li>
+        <li class="list-group-item list-group-item-info">Color: {Info.hair_color}</li>
       </ul>
       <p className="btn btn-primary" onClick={this.close}> Hide info </p>
       </div>
