@@ -11,6 +11,9 @@
           console.log(property);
           return(
             <div className="container">
+            <div className="row">
+
+            <div className="col-md-6">
             <table className="table">
               <thead>
                 <tr>
@@ -35,9 +38,12 @@
               </table>
               </div>
 
-            // <div key={property.url}>
-            //   <h5 className ="char-name">{property.name}  <span>&nbsp;&nbsp;</span> <Info Info ={property} /></h5>
-            // </div>
+                <div className="col-md-6">
+                <h3>List of favourites</h3>
+                </div>
+
+              </div>
+              </div>
           )
         })
       }
