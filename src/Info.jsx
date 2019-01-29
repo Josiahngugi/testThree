@@ -31,7 +31,7 @@ class Info extends Component{
         <li class="list-group-item list-group-item-info">Mass: {Info.mass}</li>
         <li class="list-group-item list-group-item-info">Color: {Info.hair_color}</li>
       </ul>
-      <p className="btn btn-primary" onClick={this.close}> Hide info </p>
+      <p className="btn btn-primary btn-sm" onClick={this.close}> Hide info </p>
       </div>
     )
   }
