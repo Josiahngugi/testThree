@@ -10,15 +10,22 @@ class App extends Component {
     this.state={
       traits: [],
     }
-  }
+
+    this.getTraits = this. getTraits.bind(this);
+    }
 
   getTraits(){
     return axios.get("https://swapi.co/api/people")
     .then((response) =>{
       console.log(response.data.results);
+      this.setState({traits: response.data.results});
     })
+    }
 
-  }
+    componentDidMount(){
+      this.getTraits()
+    }
+    
   render() {
     return (
       <div className="App">
