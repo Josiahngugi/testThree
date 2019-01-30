@@ -1,7 +1,7 @@
 # Code Test Three
 The program displays all the Star wars characters and allows one to choose and come with a favourite list of the characters.
 
-![Starwars](public/starwars.png)
+![Starwars](public/reviwed.png)
 ## Getting Started
 The program displays all characters with their properties.
 ## Description
