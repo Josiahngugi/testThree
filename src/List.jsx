@@ -34,17 +34,14 @@
             </thead>
             <tbody>
         {traits.map((property) =>{
-          console.log(property);
           return(
                     <tr>
-                      <td>
-
-                      </td>
+                      <td></td>
                       <td>
                       {property.name} <span>&nbsp;</span>
                       </td>
                       <td>
-                      <p className="btn btn-warning btn-xs">Add </p>
+                      <p className="btn btn-warning btn-xs" >Add </p>
                       </td>
                       <td>
                        <Info Info ={property} />
