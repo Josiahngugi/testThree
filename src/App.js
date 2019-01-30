@@ -1,36 +1,35 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import List from './List';
-import './App.css';
+import React, { Component } from "react";
+import axios from "axios";
+import List from "./List";
+import "./App.css";
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
-    this.state={
-      traits: [],
-    }
+    this.state = {
+      traits: []
+    };
 
-    this.getTraits= this.getTraits.bind(this);
-    }
+    this.getTraits = this.getTraits.bind(this);
+  }
 
-  getTraits(){
-    return axios.get("https://swapi.co/api/people")
-    .then((response) =>{
+  getTraits() {
+    return axios.get("https://swapi.co/api/people").then(response => {
       console.log(response.data.results);
-      this.setState({traits: response.data.results});
-    })
-    }
+      this.setState({ traits: response.data.results });
+    });
+  }
 
-    componentDidMount(){
-      this.getTraits()
-    }
+  componentDidMount() {
+    this.getTraits();
+  }
 
   render() {
-    const {traits}= this.state;
+    const { traits } = this.state;
     return (
       <div className="App">
-        <List traits ={traits} />
+        <List traits={traits} />
       </div>
     );
   }
